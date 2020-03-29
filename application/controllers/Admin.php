@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Admin extends CI_Controller
+{
 
 	/**
 	 * Index Page for this controller.
@@ -20,8 +21,20 @@ class Admin extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('admin/header_admin');
-		$this->load->view('admin/index');
-		$this->load->view('admin/footer_admin');
+
+		if (isset($_SESSION['is_logged'])) {
+			$data['title'] = "Dashboard";
+			$data['nama'] = $_SESSION['username'];
+			$this->load->view('admin/header_admin', $data);
+			$this->load->view('admin/navbar', $data);
+			$this->load->view('admin/sidebar', $data);
+			$this->load->view('admin/index');
+			$this->load->view('admin/footer_admin');
+			// var_dump($_SESSION);
+		} else {
+			redirect('auth');
+			// var_dump($_SESSION);
+			// echo "gagal";
+		}
 	}
 }

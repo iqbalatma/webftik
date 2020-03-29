@@ -2,8 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand" href="#">FTIK UNIKOM</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -11,7 +10,7 @@
                 <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="#">About</a>
                 <a class="nav-item nav-link" href="#">Contact</a>
-                <a class="btn btn-primary nav-item tombol" href="<?= base_url('login') ?>">Login</a>
+                <a class="btn btn-primary nav-item tombol" href="<?= base_url('auth') ?>">Login</a>
             </div>
         </div>
     </div>
